@@ -1,0 +1,101 @@
+.profile-container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.profile-container__header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-container__header__logo {
+  height: 64px;
+}
+
+.profile-container__header__greeting {
+  font-size: 20px;
+  margin-left: 24px;
+}
+
+.profile-container__header__link {
+  width: 260px;
+  margin-left: auto;
+  height: 60px;
+  background: #E02041;
+  border: 0;
+  border-radius: 8px;
+  color: #FFF;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  transition: filter .2s;
+}
+
+.profile-container__header__link:hover {
+  filter: brightness(90%);
+}
+
+.profile-container__header__button {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  border: 1px solid #DCDCE6;
+  background: transparent;
+  margin-left: 16px;
+  transition: border-color .2s;
+}
+
+.profile-container__header__button:hover {
+  border-color: #999;
+}
+
+.profile-container__title {
+  margin: 80px 0 24px;
+}
+
+.profile-container__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  list-style: none;
+}
+
+.profile-container__list__item {
+  background: #FFF;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.profile-container__list__item__title {
+  display: block;
+  margin-bottom: 16px;
+  color: #41414D;
+}
+
+.profile-container__list__item__description + .profile-container__list__item__title {
+  margin-top: 32px;
+}
+
+.profile-container__list__item__description {
+  color: #737380;
+  line-height: 21px;
+  font-size: 16px;
+}
+
+.profile-container__list__item__button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: 0;
+  transition: opacity .2s;
+}
+
+.profile-container__list__item__button:hover {
+  opacity: .8;
+}
