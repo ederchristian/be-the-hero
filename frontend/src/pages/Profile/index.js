@@ -23,6 +23,20 @@ export default function Profile() {
       setIncidents(response.data);
     })
   }, [ongId]);
+  
+  async function handleDeleteIncident(id) {
+    try {
+      await api.delete(`incidents/${id}`, {
+        headers: {
+          Authorization: ongId,
+        }
+      });
+
+      setIncidents(incidents.filter(incident => incident.id !== id))
+    } catch (err) {
+      alert('Erro ao deletar caso, tente novamente.');
+    }
+  }
 
   return (
     <div className="profile-container">
@@ -50,7 +64,7 @@ export default function Profile() {
             <strong className="profile-container__list__item__title text-uppercase">Valor:</strong>
             <p className="profile-container__list__item__description">{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</p>
 
-            <button className="profile-container__list__item__button" type="button">
+            <button className="profile-container__list__item__button" type="button" onClick={() => handleDeleteIncident(incident.id)}>
               <FiTrash2 size={20} color="#A8A8B3" />
             </button>
           </li>
