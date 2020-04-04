@@ -6,7 +6,7 @@
 
 It's an application to connect people who would love to help others to Non-governmental Organizations (NGOs).
 
-<img src="docs/img/be-the-hero.gif" alt="Be the Hero Application" style="width: 100%; max-width: 600px;">
+<img src="docs/gifs/be-the-hero.gif" alt="Be the Hero Application" style="width: 100%; max-width: 600px;">
 
 ## Development
 
